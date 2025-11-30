@@ -1,0 +1,15 @@
+
+[general]
+live_config_reload = true
+import = [
+   "~/.config/alacritty/everforest_dark.toml"
+]
+
+[window]
+dimensions = { columns = 80, lines = 24 }
+decorations = "full"
+
+[font]
+normal = { family = "JetBrains Mono NL" }
+size = 14.0
+
