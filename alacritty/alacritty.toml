@@ -10,6 +10,6 @@ dimensions = { columns = 80, lines = 24 }
 decorations = "full"
 
 [font]
-normal = { family = "JetBrains Mono NL" }
+normal = { family = "Maple Mono NL NF CN" }
 size = 14.0
 
