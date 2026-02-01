@@ -1,4 +1,5 @@
 
+// if you use `niri-session` this is unnecessary
 // spawn-at-startup "waybar"
 spawn-at-startup "swaybg" "-c" "2b3339"
 
@@ -16,6 +17,9 @@ input {
     touchpad {
         tap
     }
+
+    focus-follows-mouse
+    warp-mouse-to-focus
 }
 
 cursor {
@@ -80,12 +84,9 @@ hotkey-overlay {
 screenshot-path null
 
 window-rule {
-    match app-id=r#"librewolf$"# title="^Picture-in-Picture$"
-    open-floating true
-}
-
-window-rule {
+   match app-id=r#"librewolf$"# title="^Picture-in-Picture$"
    match app-id=r#"protonvpn"#
+   match title=r#"[Cc]alculator"#
    open-floating true
 }
 
