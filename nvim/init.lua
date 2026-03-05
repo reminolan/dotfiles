@@ -43,7 +43,7 @@ local function BootstrapLazy(colorscheme, lazy_spec)
    return lazy
 end
 
-local lazy = BootstrapLazy("everforest", {
+local lazy = BootstrapLazy("adwaita", {
    {
       "nvim-treesitter/nvim-treesitter",
       branch = 'master',
@@ -64,7 +64,9 @@ local lazy = BootstrapLazy("everforest", {
       }
    },
    {
-      'nvim-treesitter/nvim-treesitter'
+      "Mofiqul/adwaita.nvim",
+      lazy = false,
+      priority = 1000,
    }
 })
 
@@ -77,13 +79,9 @@ require('nvim-treesitter.configs').setup({
    }
 })
 
-require('everforest').setup({
-   background="hard",
+-- require('everforest').setup({ background="hard", italics=false, disable_italic_comments=true })
 
-   italics=false,
-   disable_italic_comments=true
-})
-vim.cmd([[colo everforest]])
+vim.cmd([[colo adwaita]])
 
 vim.opt.background = 'dark'
 vim.opt.number = true 
@@ -103,7 +101,15 @@ vim.lsp.enable('qmlls')
 
 vim.opt.guifont = "Maple Mono NL NF CN:h14"
 
-vim.keymap.set('n', 'f', function()
+if vim.g.neovide then
+   vim.g.neovide_hide_mouse_when_typing = true
+
+   vim.keymap.set('n', '<F4>', function()
+      vim.g.neovide_fullscreen = not vim.g.neovide_fullscreen
+   end)
+end
+
+vim.keymap.set('n', 'q', function()
    vim.cmd([[:noh]])
 end)
 
