@@ -64,9 +64,7 @@ local lazy = BootstrapLazy("adwaita", {
       }
    },
    {
-      "Mofiqul/adwaita.nvim",
-      lazy = false,
-      priority = 1000,
+      "nyoom-engineering/oxocarbon.nvim"
    }
 })
 
@@ -80,8 +78,6 @@ require('nvim-treesitter.configs').setup({
 })
 
 -- require('everforest').setup({ background="hard", italics=false, disable_italic_comments=true })
-
-vim.cmd([[colo adwaita]])
 
 vim.opt.background = 'dark'
 vim.opt.number = true 
@@ -99,7 +95,8 @@ vim.opt.completeopt = { "menuone", "noselect", "popup" }
 vim.lsp.enable('clangd')
 vim.lsp.enable('qmlls')
 
-vim.opt.guifont = "Maple Mono NL NF CN:h14"
+vim.cmd([[colo oxocarbon]])
+vim.opt.guifont = "Maple Mono NL NF CN:h10"
 
 if vim.g.neovide then
    vim.g.neovide_hide_mouse_when_typing = true
