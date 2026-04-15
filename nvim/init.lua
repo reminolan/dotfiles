@@ -43,7 +43,7 @@ local function BootstrapLazy(colorscheme, lazy_spec)
    return lazy
 end
 
-local lazy = BootstrapLazy("adwaita", {
+local lazy = BootstrapLazy("everforest", {
    {
       "nvim-treesitter/nvim-treesitter",
       branch = 'master',
@@ -57,14 +57,14 @@ local lazy = BootstrapLazy("adwaita", {
       priority = 1000
    },
    {
+      "nyoom-engineering/oxocarbon.nvim"
+   },
+   {
       'nvim-telescope/telescope.nvim',
       lazy = true,
       dependencies = {
          { 'nvim-lua/plenary.nvim' }
       }
-   },
-   {
-      "nyoom-engineering/oxocarbon.nvim"
    }
 })
 
@@ -77,7 +77,11 @@ require('nvim-treesitter.configs').setup({
    }
 })
 
--- require('everforest').setup({ background="hard", italics=false, disable_italic_comments=true })
+require('everforest').setup({
+   background="hard",
+   italics=false,
+   disable_italic_comments=true
+})
 
 vim.opt.background = 'dark'
 vim.opt.number = true 
@@ -91,17 +95,13 @@ vim.opt.softtabstop = 3
 vim.opt.expandtab = true
 vim.opt.cursorline = true
 
-vim.opt.completeopt = { "menuone", "noselect", "popup" }
-vim.lsp.enable('clangd')
-vim.lsp.enable('qmlls')
-
-vim.cmd([[colo oxocarbon]])
-vim.opt.guifont = "Maple Mono NL NF CN:h10"
+vim.cmd([[colo everforest]])
+vim.opt.guifont = "Maple Mono NL NF CN:h12"
 
 if vim.g.neovide then
    vim.g.neovide_hide_mouse_when_typing = true
 
-   vim.keymap.set('n', '<F4>', function()
+   vim.keymap.set('n', '<F11>', function()
       vim.g.neovide_fullscreen = not vim.g.neovide_fullscreen
    end)
 end
