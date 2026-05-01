@@ -51,13 +51,7 @@ local lazy = BootstrapLazy("everforest", {
       build = ":TSUpdate"
    },
    {
-      "neanias/everforest-nvim",
-      version = false,
-      lazy = false,
-      priority = 1000
-   },
-   {
-      "nyoom-engineering/oxocarbon.nvim"
+      "shaunsingh/nord.nvim",
    },
    {
       'nvim-telescope/telescope.nvim',
@@ -77,12 +71,6 @@ require('nvim-treesitter.configs').setup({
    }
 })
 
-require('everforest').setup({
-   background="hard",
-   italics=false,
-   disable_italic_comments=true
-})
-
 vim.opt.background = 'dark'
 vim.opt.number = true 
 vim.opt.relativenumber = false
@@ -95,8 +83,12 @@ vim.opt.softtabstop = 3
 vim.opt.expandtab = true
 vim.opt.cursorline = true
 
-vim.cmd([[colo everforest]])
-vim.opt.guifont = "Maple Mono NL NF CN:h12"
+vim.g.nord_contrast = true
+vim.g.nord_italic = false
+vim.g.nord_bold = false
+require('nord').set()
+
+vim.opt.guifont = "Liberation Mono:h13"
 
 if vim.g.neovide then
    vim.g.neovide_hide_mouse_when_typing = true

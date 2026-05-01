@@ -3,7 +3,8 @@
 live_config_reload = true
 import = [
    #"~/.config/alacritty/oxocarbon-dark.toml"
-   "~/.config/alacritty/everforest_dark.toml"
+   #"~/.config/alacritty/everforest_dark.toml"
+   "~/.config/alacritty/nord.toml"
 ]
 
 [window]
@@ -11,6 +12,6 @@ dimensions = { columns = 80, lines = 24 }
 decorations = "full"
 
 [font]
-normal = { family = "Maple Mono NL NF CN" }
-size = 11.0
+normal = { family = "Liberation Mono" }
+size = 13
 
