@@ -2,9 +2,7 @@
 [general]
 live_config_reload = true
 import = [
-   #"~/.config/alacritty/oxocarbon-dark.toml"
-   #"~/.config/alacritty/everforest_dark.toml"
-   "~/.config/alacritty/nord.toml"
+   "~/.config/alacritty/gruvbox-dark.toml"
 ]
 
 [window]

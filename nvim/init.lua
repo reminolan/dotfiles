@@ -43,7 +43,7 @@ local function BootstrapLazy(colorscheme, lazy_spec)
    return lazy
 end
 
-local lazy = BootstrapLazy("everforest", {
+local lazy = BootstrapLazy("gruvbox", {
    {
       "nvim-treesitter/nvim-treesitter",
       branch = 'master',
@@ -51,14 +51,7 @@ local lazy = BootstrapLazy("everforest", {
       build = ":TSUpdate"
    },
    {
-      "shaunsingh/nord.nvim",
-   },
-   {
-      'nvim-telescope/telescope.nvim',
-      lazy = true,
-      dependencies = {
-         { 'nvim-lua/plenary.nvim' }
-      }
+      "ellisonleao/gruvbox.nvim"
    }
 })
 
@@ -83,20 +76,10 @@ vim.opt.softtabstop = 3
 vim.opt.expandtab = true
 vim.opt.cursorline = true
 
-vim.g.nord_contrast = true
-vim.g.nord_italic = false
-vim.g.nord_bold = false
-require('nord').set()
+vim.opt.guifont = "Liberation Mono:h12"
 
-vim.opt.guifont = "Liberation Mono:h13"
-
-if vim.g.neovide then
-   vim.g.neovide_hide_mouse_when_typing = true
-
-   vim.keymap.set('n', '<F11>', function()
-      vim.g.neovide_fullscreen = not vim.g.neovide_fullscreen
-   end)
-end
+require("gruvbox").setup()
+vim.cmd.colorscheme("gruvbox")
 
 vim.keymap.set('n', 'q', function()
    vim.cmd([[:noh]])
@@ -110,9 +93,4 @@ vim.keymap.set('n', '<C-c>', function()
    vim.cmd([[:set cursorcolumn!]])
 end)
 
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', 'ff', builtin.find_files, { desc = 'Telescope: find files' })
-vim.keymap.set('n', 'fg', builtin.git_files, { desc = 'Telescope: git files' })
-vim.keymap.set('n', 'fb', builtin.buffers, { desc = 'Telescope: buffers' })
-vim.keymap.set('n', 'fh', builtin.help_tags, { desc = 'Telescope: help tags' })
 
