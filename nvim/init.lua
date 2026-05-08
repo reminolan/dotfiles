@@ -43,7 +43,7 @@ local function BootstrapLazy(colorscheme, lazy_spec)
    return lazy
 end
 
-local lazy = BootstrapLazy("gruvbox", {
+local lazy = BootstrapLazy("everforest", {
    {
       "nvim-treesitter/nvim-treesitter",
       branch = 'master',
@@ -51,7 +51,7 @@ local lazy = BootstrapLazy("gruvbox", {
       build = ":TSUpdate"
    },
    {
-      "ellisonleao/gruvbox.nvim"
+      "neanias/everforest-nvim"
    }
 })
 
@@ -78,8 +78,7 @@ vim.opt.cursorline = true
 
 vim.opt.guifont = "Liberation Mono:h12"
 
-require("gruvbox").setup()
-vim.cmd.colorscheme("gruvbox")
+vim.cmd.colorscheme("everforest")
 
 vim.keymap.set('n', 'q', function()
    vim.cmd([[:noh]])

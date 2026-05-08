@@ -2,7 +2,7 @@
 [general]
 live_config_reload = true
 import = [
-   "~/.config/alacritty/gruvbox-dark.toml"
+   "~/.config/alacritty/everforest-dark.toml"
 ]
 
 [window]
@@ -11,5 +11,5 @@ decorations = "full"
 
 [font]
 normal = { family = "Liberation Mono" }
-size = 13
+size = 12
 
