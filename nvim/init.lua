@@ -56,7 +56,7 @@ local lazy = BootstrapLazy("everforest", {
 })
 
 require('nvim-treesitter.configs').setup({
-   ensure_installed = { 'c', 'lua', 'markdown', 'python' },
+   ensure_installed = { 'c', 'cmake', 'lua', 'markdown', 'python' },
    auto_install = true,
 
    highlight = {
@@ -76,7 +76,7 @@ vim.opt.softtabstop = 3
 vim.opt.expandtab = true
 vim.opt.cursorline = true
 
-vim.opt.guifont = "Liberation Mono:h12"
+vim.opt.guifont = "Cascadia Mono NF:h13"
 
 vim.cmd.colorscheme("everforest")
 

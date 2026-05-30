@@ -1,0 +1,20 @@
+
+{
+   "position": "bottom",
+   "height": 32,
+   "spacing": 4,
+
+   "modules-left": [
+      "niri/workspaces"
+   ],
+   "modules-center": [
+   ],
+   "modules-right": [
+      "clock",
+      "mpd",
+      "tray",
+      "pulseaudio",
+      "battery"
+   ]
+}
+

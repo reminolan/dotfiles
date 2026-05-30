@@ -1,7 +1,7 @@
 
 prefer-no-csd
 spawn-at-startup "waybar"
-screenshot-path "~/Pictures/Screenshots/Screenshot_%Y-%m-%d_%H-%M-%S.png"
+screenshot-path "~/Pictures/Screenshots/Screenshot-%Y-%m-%d_%H-%M-%S.png"
 
 input {
    keyboard {

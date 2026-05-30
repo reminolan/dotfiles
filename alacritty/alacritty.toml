@@ -10,6 +10,6 @@ dimensions = { columns = 80, lines = 24 }
 decorations = "full"
 
 [font]
-normal = { family = "Liberation Mono" }
-size = 12
+normal = { family = "Cascadia Mono NF" }
+size = 14
 
