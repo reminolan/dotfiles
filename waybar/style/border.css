@@ -1,0 +1,16 @@
+#workspaces button,
+#window,
+#cpu,
+#disk,
+#temperature,
+#memory,
+#clock,
+#tray,
+#clock,
+#pulseaudio,
+#language,
+#battery,
+#tray {
+  border: none;
+  border-radius: 10px;
+}

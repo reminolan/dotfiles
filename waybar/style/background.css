@@ -1,0 +1,20 @@
+
+window {
+  background: @transparent;
+}
+
+#workspaces button,
+#window,
+#cpu,
+#disk,
+#temperature,
+#memory,
+#pulseaudio,
+#language,
+#clock,
+#tray,
+#battery,
+tooltip {
+  background: #272E33;
+}
+

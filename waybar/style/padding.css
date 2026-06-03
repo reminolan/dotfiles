@@ -1,0 +1,18 @@
+#window,
+#memory,
+#disk,
+#temperature,
+#cpu,
+#pulseaudio,
+#language,
+#clock,
+#tray,
+#battery,
+#workspaces button,
+#tooltip {
+  padding: 0 5px;
+}
+
+#workspaces button.active {
+  padding: 0 20px;
+}

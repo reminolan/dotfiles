@@ -10,11 +10,14 @@
    "modules-center": [
    ],
    "modules-right": [
-      "clock",
       "mpd",
       "tray",
       "pulseaudio",
-      "battery"
-   ]
+      "battery",
+      "clock"
+   ],
+   "clock": {
+      "format": "{:%F %H:%M}"
+   }
 }
 
