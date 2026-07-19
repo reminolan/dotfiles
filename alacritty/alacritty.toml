@@ -2,7 +2,7 @@
 [general]
 live_config_reload = true
 import = [
-   "~/.config/alacritty/everforest-dark.toml"
+   #"~/.config/alacritty/everforest-dark.toml"
 ]
 
 [window]
@@ -11,5 +11,5 @@ decorations = "full"
 
 [font]
 normal = { family = "Cascadia Mono NF" }
-size = 14
+size = 13
 
